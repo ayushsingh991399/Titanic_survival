@@ -53,8 +53,8 @@ if st.button("🎯 Predict Survival"):
     # Model Prediction
     result = model.predict([[pclass, gender, age, sibsp, parch, fare, embarked]])[0]
 
-    # Output
-if result == 1:
+    # Styled Output
+    if result == 1:
         st.markdown("""
             <div style='background-color:#D4EDDA; padding:20px; border-radius:10px; border:1px solid #155724'>
                 <h3 style='color:#155724;'>🎉 Prediction: The passenger would have <u>SURVIVED</u>.</h3>
@@ -62,7 +62,7 @@ if result == 1:
             </div>
         """, unsafe_allow_html=True)
         st.balloons()
-else:
+    else:
         st.markdown("""
             <div style='background-color:#F8D7DA; padding:20px; border-radius:10px; border:1px solid #721C24'>
                 <h3 style='color:#721C24;'>💀 Prediction: The passenger would <u>NOT have survived</u>.</h3>
