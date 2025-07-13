@@ -6,7 +6,7 @@ with open("model.pkl",'rb') as f:
     model = pickle.load(f)
 st.image("https://upload.wikimedia.org/wikipedia/commons/f/fd/RMS_Titanic_3.jpg", use_column_width=True)
 st.header("Titanic Survival Prediction !!")
- if result == 1:
+if result == 1:
         st.markdown("""
             <div style='background-color:#D4EDDA; padding:20px; border-radius:10px; border:1px solid #155724'>
                 <h3 style='color:#155724;'>🎉 Prediction: The passenger would have <u>SURVIVED</u>.</h3>
@@ -14,7 +14,7 @@ st.header("Titanic Survival Prediction !!")
             </div>
         """, unsafe_allow_html=True)
         st.balloons()
-    else:
+else:
         st.markdown("""
             <div style='background-color:#F8D7DA; padding:20px; border-radius:10px; border:1px solid #721C24'>
                 <h3 style='color:#721C24;'>💀 Prediction: The passenger would <u>NOT have survived</u>.</h3>
