@@ -4,9 +4,9 @@ import pickle
 
 with open("model.pkl",'rb') as f:
     model = pickle.load(f)
-st.image("https://upload.wikimedia.org/wikipedia/commons/f/fd/RMS_Titanic_3.jpg", use_container_width=True)
-st.header("Titanic Survival Prediction !!")
 
+st.header("Titanic Survival Prediction !!")
+st.image("https://upload.wikimedia.org/wikipedia/commons/f/fd/RMS_Titanic_3.jpg", use_container_width=True)
 
 st.set_page_config(page_title="Titanic Survival Predictor", page_icon="🚢", layout="wide")
 st.markdown("<h1 style='text-align: center; color: #00416A;'>🚢 Titanic Survival Prediction App</h1>", unsafe_allow_html=True)
