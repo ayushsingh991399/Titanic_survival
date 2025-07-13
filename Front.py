@@ -6,21 +6,7 @@ with open("model.pkl",'rb') as f:
     model = pickle.load(f)
 st.image("https://upload.wikimedia.org/wikipedia/commons/f/fd/RMS_Titanic_3.jpg", use_column_width=True)
 st.header("Titanic Survival Prediction !!")
-if result == 1:
-        st.markdown("""
-            <div style='background-color:#D4EDDA; padding:20px; border-radius:10px; border:1px solid #155724'>
-                <h3 style='color:#155724;'>🎉 Prediction: The passenger would have <u>SURVIVED</u>.</h3>
-                <p style='color:#155724;'>There's a good chance they made it out alive.</p>
-            </div>
-        """, unsafe_allow_html=True)
-        st.balloons()
-else:
-        st.markdown("""
-            <div style='background-color:#F8D7DA; padding:20px; border-radius:10px; border:1px solid #721C24'>
-                <h3 style='color:#721C24;'>💀 Prediction: The passenger would <u>NOT have survived</u>.</h3>
-                <p style='color:#721C24;'>Unfortunately, the odds were against them.</p>
-            </div>
-        """, unsafe_allow_html=True)
+
 
 st.set_page_config(page_title="Titanic Survival Predictor", page_icon="🚢", layout="wide")
 st.markdown("<h1 style='text-align: center; color: #00416A;'>🚢 Titanic Survival Prediction App</h1>", unsafe_allow_html=True)
@@ -68,10 +54,20 @@ if st.button("🎯 Predict Survival"):
     result = model.predict([[pclass, gender, age, sibsp, parch, fare, embarked]])[0]
 
     # Output
-    if result == 1:
-        st.success("🎉 **Prediction: The passenger would have SURVIVED.**\n\nThere's a good chance they made it out alive.")
+if result == 1:
+        st.markdown("""
+            <div style='background-color:#D4EDDA; padding:20px; border-radius:10px; border:1px solid #155724'>
+                <h3 style='color:#155724;'>🎉 Prediction: The passenger would have <u>SURVIVED</u>.</h3>
+                <p style='color:#155724;'>There's a good chance they made it out alive.</p>
+            </div>
+        """, unsafe_allow_html=True)
         st.balloons()
-    else:
-        st.error("💀 **Prediction: The passenger would NOT have survived.**\n\nUnfortunately, the odds were against them.")
+else:
+        st.markdown("""
+            <div style='background-color:#F8D7DA; padding:20px; border-radius:10px; border:1px solid #721C24'>
+                <h3 style='color:#721C24;'>💀 Prediction: The passenger would <u>NOT have survived</u>.</h3>
+                <p style='color:#721C24;'>Unfortunately, the odds were against them.</p>
+            </div>
+        """, unsafe_allow_html=True)
     
     
