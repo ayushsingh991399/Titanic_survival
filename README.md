@@ -38,20 +38,17 @@ cd titanic-survival-app
 ```
 2. Install Dependencies
 ```bash
-Copy
-Edit
+
 pip install -r requirements.txt
 ```
 4. Run the App
 ```bash
-Copy
-Edit
+
 streamlit run app.py
 ```
 📁 File Structure
 ```bash
-Copy
-Edit
+
 ├── app.py                # Main Streamlit app
 ├── model.pkl             # Pre-trained ML model
 ├── requirements.txt      # Python dependencies
