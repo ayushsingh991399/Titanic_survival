@@ -35,24 +35,29 @@ The model (`model.pkl`) is trained on the Titanic dataset with the following fea
 ```bash
 git clone https://github.com/yourusername/titanic-survival-app.git
 cd titanic-survival-app
+```
 2. Install Dependencies
-bash
+```bash
 Copy
 Edit
 pip install -r requirements.txt
-3. Run the App
-bash
+```
+4. Run the App
+```bash
 Copy
 Edit
 streamlit run app.py
+```
 📁 File Structure
-bash
+```bash
 Copy
 Edit
 ├── app.py                # Main Streamlit app
 ├── model.pkl             # Pre-trained ML model
 ├── requirements.txt      # Python dependencies
 └── README.md             # Project documentation
+```
+```
 ⚠️ Null Input Handling
 If the user submits the form without entering any details (i.e., all values default), the app will display a special message:
 
